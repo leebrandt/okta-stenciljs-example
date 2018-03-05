@@ -20,6 +20,36 @@ declare global {
 
 
 import {
+  AppAuth as AppAuth
+} from './components/app-auth/app-auth';
+
+declare global {
+  interface HTMLAppAuthElement extends AppAuth, HTMLStencilElement {
+  }
+  var HTMLAppAuthElement: {
+    prototype: HTMLAppAuthElement;
+    new (): HTMLAppAuthElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-auth": HTMLAppAuthElement;
+  }
+  interface ElementTagNameMap {
+    "app-auth": HTMLAppAuthElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-auth": JSXElements.AppAuthAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppAuthAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   AppHome as AppHome
 } from './components/app-home/app-home';
 
