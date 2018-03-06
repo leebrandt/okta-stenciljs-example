@@ -105,7 +105,6 @@ declare global {
     export interface AppProfileAttributes extends HTMLAttributes {
       authClient?: any;
       history?: RouterHistory;
-      user?: AppUser;
     }
   }
 }

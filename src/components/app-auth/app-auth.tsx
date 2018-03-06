@@ -48,7 +48,8 @@ export class AppAuth {
             })
             .then(token => {
               console.log(token);
-              this.authClient.tokenManager.add("okta_id_token", token);
+              localStorage.setItem('okta_id_token', JSON.stringify(token));
+              //this.authClient.tokenManager.add('okta_id_token', token);
             });
 
           this.history.push("/profile", {});

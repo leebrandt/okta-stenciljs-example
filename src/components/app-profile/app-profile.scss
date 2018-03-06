@@ -1,6 +1,11 @@
 .app-profile {
-  padding: 10px;
-  &:hover{
-    background-color: #CCC;
+  padding: 1rem;
+  color: #000;
+  ul{
+    li{
+      span{
+        font-weight: bold;
+      }
+    }
   }
 }
