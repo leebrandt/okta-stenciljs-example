@@ -16,7 +16,7 @@ export class MyApp {
         <main>
           <stencil-router>
             <stencil-route url="/" component="app-home" exact={true} />
-            <stencil-route url="/profile/:name" component="app-profile" />
+            <stencil-route url="/profile" component="app-profile" />
             <stencil-route url="/sessions" component="session-list" exact={true} />
             <stencil-route url="/login" component="app-auth" exact={true} />
           </stencil-router>

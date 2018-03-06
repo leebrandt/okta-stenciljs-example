@@ -7,7 +7,7 @@
 import '@stencil/router';
 
 import {
-  MatchResults,
+  RouterHistory,
 } from '@stencil/router';
 
 declare global {
@@ -43,7 +43,7 @@ declare global {
   }
   namespace JSXElements {
     export interface AppAuthAttributes extends HTMLAttributes {
-      
+      history?: RouterHistory;
     }
   }
 }
@@ -103,7 +103,9 @@ declare global {
   }
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
-      match?: MatchResults;
+      authClient?: any;
+      history?: RouterHistory;
+      user?: AppUser;
     }
   }
 }
@@ -133,36 +135,6 @@ declare global {
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  SessionList as SessionList
-} from './components/session-list/session-list';
-
-declare global {
-  interface HTMLSessionListElement extends SessionList, HTMLStencilElement {
-  }
-  var HTMLSessionListElement: {
-    prototype: HTMLSessionListElement;
-    new (): HTMLSessionListElement;
-  };
-  interface HTMLElementTagNameMap {
-    "session-list": HTMLSessionListElement;
-  }
-  interface ElementTagNameMap {
-    "session-list": HTMLSessionListElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "session-list": JSXElements.SessionListAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface SessionListAttributes extends HTMLAttributes {
       
     }
   }
